@@ -1,0 +1,100 @@
+/* 基础样式和布局 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #2d3748;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 头部样式 */
+header {
+  background: linear-gradient(135deg, #005baa 0%, #003d73 100%);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 91, 170, 0.15);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+/* 主内容区域 */
+main {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  border: 1px solid #e2e8f0;
+}
+
+/* 底部样式 */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  background: linear-gradient(135deg, #005baa 0%, #003d73 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 91, 170, 0.15);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 颜色类 */
+.blue-text { color: #2b6cb0; }
+.orange-text { color: #dd6b20; }
+.yellow-text { color: #d69e2e; }
+.grey-text { color: #718096; }
+.red-text { color: #e53e3e; }
+.green-text { color: #38a169; }
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+  
+  main {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 25px 0;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+}
