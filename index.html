@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>肾上腺素自动注射器训练器使用说明</title>
+  
+  <!-- CSS文件 -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Summed Medtech 森迈内部培训资料</div>
+      <div class="subtitle">肾上腺素自动注射器训练器使用说明</div>
+    </header>
+    
+    <main>
+      <div class="tabs">
+        <button class="tab-button" onclick="openTab(event, 'epipen')">
+          EpiPen训练器
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'teva')">
+          Teva EAI训练器
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'adrenaclick')">
+          Adrenaclick训练器
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'anapen')">
+          Anapen训练器
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'emerade')">
+          Emerade训练器
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'jext')">
+          Jext训练器
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'auvi-q')">
+          Auvi-Q训练器
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'fda-ifu')">
+          FDA使用说明指南
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'fda-hfe')">
+          FDA人因工程指南
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'ema-guidance')">
+          EMA训练工具指南
+        </button>
+      </div>
+      
+      <div id="tab-content-container">
+        <!-- EpiPen训练器内容 -->
+        <div class="tab-content" id="epipen">
+          <h2 class="section-title">EpiPen训练器使用说明</h2>
+          
+          <!-- 真实EAI与训练器对比 -->
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔍 真实EpiPen® vs 训练器对比</h3>
+            <div class="comparison-grid">
+              <!-- 真实设备 -->
+              <div class="device-card">
+                <div class="device-header real">
+                  <h4>💊 真实EpiPen® 自动注射器</h4>
+                </div>
+                <div class="device-image-container">
+                  <div style="display: flex; flex-direction: column; gap: 15px; justify-content: center; align-items: center;">
+                    <img src="images/eai/EAI photo/Epipen.png" alt="真实EpiPen" class="device-image" style="width: 300px;" onclick="openImageModal(this.src, '真实EpiPen')" />
+                    <img src="images/eai/EAI photo/Epipen2.png" alt="真实EpiPen2" class="device-image" style="width: 300px;" onclick="openImageModal(this.src, '真实EpiPen2')" />
+                  </div>
+                </div>
+                <div class="device-details">
+                  <p style="font-weight: 600; color: #005baa; margin-bottom: 15px;">✅ 真实设备特征：</p>
+                  <ul class="feature-list">
+                    <li><span class="yellow-text">黄色</span>标签 (0.3mg 成人) 或 <span class="green-text">绿色</span>标签 (0.15mg 儿童)</li>
+                    <li><span class="blue-text">蓝色安全帽</span></li>
+                    <li><span class="orange-text">橙色针头端</span></li>
+                    <li><strong>含肾上腺素药物</strong></li>
+                    <li><strong>含真实针头</strong></li>
+                    <li><strong>仅可使用一次</strong></li>
+                    <li><strong>有效期标识</strong></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- 训练器 -->
+              <div class="device-card">
+                <div class="device-header trainer">
+                  <h4>🎯 EpiPen® 训练器</h4>
+                </div>
+                <div class="device-image-container">
+                  <div style="display: flex; flex-direction: column; gap: 15px; justify-content: center; align-items: center;">
+                    <img src="images/fda/FDA EMA IFU/Epipen trainer1.png" alt="EpiPen训练器1" class="device-image" style="width: 300px;" onclick="openImageModal(this.src, 'EpiPen训练器1')" />
+                    <img src="images/fda/FDA EMA IFU/Epipen trainer2.png" alt="EpiPen训练器2" class="device-image" style="width: 300px;" onclick="openImageModal(this.src, 'EpiPen训练器2')" />
+                  </div>
+                </div>
+                <div class="device-details">
+                  <p style="font-weight: 600; color: #4a5568; margin-bottom: 15px;">🎓 训练器特征：</p>
+                  <ul class="feature-list">
+                    <li><span style="color: #87CEEB; font-weight: 600;">淡蓝色和灰色</span>外观</li>
+                    <li><strong>"TRAINER"</strong> 训练笔清楚标识</li>
+                    <li><span class="blue-text">蓝色安全帽</span> (相同)</li>
+                    <li><span class="orange-text">橙色针头端</span> (相同)</li>
+                    <li><strong>无肾上腺素药物</strong></li>
+                    <li><strong>无真实针头</strong></li>
+                    <li><strong>可重复使用</strong></li>
+                    <li><strong>无有效期</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="warning-box">
+              <h4 style="color: #cc0000; margin: 0 0 10px 0;">⚠️ 重要安全提醒</h4>
+              <p style="margin: 0; font-weight: bold; color: #cc0000;">训练器为淡蓝色和灰色，与真实EpiPen®的黄色/绿色标签完全不同，切勿在紧急情况下使用训练器！</p>
+            </div>
+          </section>
+
+          <!-- 视频演示部分 -->
+          <section class="video-section">
+            <h3 class="section-title" style="color: #005baa; margin-top: 0;">📹 视频演示 (3个视频)</h3>
+            <p style="margin-bottom: 20px; color: #333; font-weight: 500;">点击下方链接观看EpiPen训练器相关演示：</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 EpiPen基础使用演示
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">展示EpiPen的基本使用方法和操作步骤</p>
+                <a href="video/Epipen.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Epipen.mp4', 'EpiPen基础使用演示'); return false;">
+                  ▶ 播放视频 (1.7MB)
+                </a>
+              </div>
+              
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 真实设备vs训练器对比
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">详细对比真实EpiPen与训练器的外观和功能差异</p>
+                <a href="video/Epipen Real Vs Trainer.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Epipen Real Vs Trainer.mp4', 'EpiPen真实设备vs训练器对比'); return false;">
+                  ▶ 播放视频 (4.0MB)
+                </a>
+              </div>
+              
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 多品牌EAI注射演示
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">EpiPen、Auvi-Q、Emerade等多种品牌注射到明胶中的演示</p>
+                <a href="video/Epipen Impac Auvi-Q Emerade Firing into Gelatin.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Epipen Impac Auvi-Q Emerade Firing into Gelatin.mp4', '多品牌EAI注射演示'); return false;">
+                  ▶ 播放视频 (9.4MB)
+                </a>
+              </div>
+            </div>
+          </section>
+          
+          <!-- 操作步骤 -->
+
+
+
+
+
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">2. 操作步骤</h3>
+            <div class="step-container">
+              <div class="step-item">
+                <p><strong><span class="step-number">1</span>准备训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>用拳头<strong>牢固握住</strong>训练器，<span class="orange-text">橙色尖端</span>朝下。</li>
+                  <li>用另一只手拉下<span class="blue-text">蓝色安全释放装置</span>。</li>
+                  <li><strong>切勿将拇指、手指或手放在橙色尖端上</strong>。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">2</span>模拟注射：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>将<span class="orange-text">橙色尖端</span>对准大腿外侧中部，与大腿成直角。</li>
+                  <li>用力推动训练器，直到听到"咔嗒"声。</li>
+                  <li>固定在原位<strong>约3秒钟</strong>。</li>
+                  <li>从大腿上移开训练器。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">3</span>重置训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>将<span class="orange-text">橙色尖端</span>放在硬质表面上。</li>
+                  <li>用手挤压训练器两侧，同时向上推回到原始位置。</li>
+                  <li>重新装上<span class="blue-text">蓝色安全帽</span>以备下次练习使用。</li>
+                  <li>训练器现在可以重复使用。</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <!-- 其他标签页内容将通过JavaScript动态加载 -->
+        <div class="tab-content" id="teva">
+          <h2 class="section-title">Teva EAI训练器使用说明</h2>
+          
+          <!-- 真实EAI与训练器对比 -->
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔍 真实Teva EAI® vs 训练器对比</h3>
+            <div class="comparison-grid">
+              <!-- 真实设备 -->
+              <div class="device-card">
+                <div class="device-header real">
+                  <h4>💊 真实Teva EAI® 自动注射器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/eai/EAI photo/Teva EAI.png" alt="真实Teva EAI" class="device-image" onclick="openImageModal(this.src, '真实Teva EAI')" />
+                </div>
+                <div class="device-details">
+                  <p style="font-weight: 600; color: #005baa; margin-bottom: 15px;">✅ 真实设备特征：</p>
+                  <ul class="feature-list">
+                    <li><span class="grey-text">灰色</span>外观</li>
+                    <li><span class="blue-text">蓝色安全释放装置</span></li>
+                    <li><span class="orange-text">橙色针头端</span></li>
+                    <li><strong>含肾上腺素药物</strong></li>
+                    <li><strong>含真实针头</strong></li>
+                    <li><strong>仅可使用一次</strong></li>
+                    <li><strong>有效期标识</strong></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- 训练器 -->
+              <div class="device-card">
+                <div class="device-header trainer">
+                  <h4>🎯 Teva EAI® 训练器</h4>
+                </div>
+                <div class="device-image-container">
+                  <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <img src="images/fda/FDA EMA IFU/teva trainer1.png" alt="Teva训练器1" class="device-image" onclick="openImageModal(this.src, 'Teva训练器1')" />
+                    <img src="images/fda/FDA EMA IFU/teva trainer2.png" alt="Teva训练器2" class="device-image" onclick="openImageModal(this.src, 'Teva训练器2')" />
+                  </div>
+                </div>
+                <div class="device-details">
+                  <p style="font-weight: 600; color: #4a5568; margin-bottom: 15px;">🎓 训练器特征：</p>
+                  <ul class="feature-list">
+                    <li><span class="grey-text">灰色</span>外观 (相同)</li>
+                    <li><strong>"TRAINER"</strong> 清楚标识</li>
+                    <li><span class="blue-text">蓝色安全释放装置</span> (相同)</li>
+                    <li><span class="orange-text">橙色针头端</span> (相同)</li>
+                    <li><strong>无肾上腺素药物</strong></li>
+                    <li><strong>无真实针头</strong></li>
+                    <li><strong>可重复使用</strong></li>
+                    <li><strong>无有效期</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="warning-box">
+              <h4 style="color: #cc0000; margin: 0 0 10px 0;">⚠️ 重要安全提醒</h4>
+              <p style="margin: 0; font-weight: bold; color: #cc0000;">训练器外观与真实设备相似，但有明显的"TRAINER"标识，切勿在紧急情况下使用训练器！</p>
+            </div>
+          </section>
+
+          <!-- 视频演示部分 -->
+          <section class="video-section">
+            <h3 class="section-title" style="color: #005baa; margin-top: 0;">📹 视频演示 (1个视频)</h3>
+            <p style="margin-bottom: 20px; color: #333; font-weight: 500;">点击下方链接观看Teva训练器相关演示：</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 Teva训练器使用演示
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">展示Teva训练器的正确使用方法和重置步骤</p>
+                <a href="video/Teva trainer.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Teva trainer.mp4', 'Teva训练器使用演示'); return false;">
+                  ▶ 播放视频 (5.9MB)
+                </a>
+              </div>
+            </div>
+          </section>
+          
+          <!-- 操作步骤 -->
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">2. 操作步骤</h3>
+            <div class="step-container">
+              <div class="step-item">
+                <p><strong><span class="step-number">1</span>准备训练器进行模拟注射：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>用拳头<strong>牢固握住</strong>灰色训练器，<span class="orange-text">橙色尖端</span>朝下。</li>
+                  <li>用另一只手拉下<span class="blue-text">蓝色安全释放装置</span>。</li>
+                  <li><strong>切勿将拇指、手指或手放在橙色尖端上</strong>，这模拟针头出口点，可能导致伤害。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">2</span>进行训练器模拟：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>如果与幼儿一起练习，在使用训练器时，请牢牢固定住腿部，防止意外伤害。</li>
+                  <li>将<span class="orange-text">橙色尖端</span>对准大腿外侧中部，与大腿成直角（90°角）。</li>
+                  <li>用力推动训练器，直到听到"咔嗒"声，这表示注射机制已启动。</li>
+                  <li>固定在原位<strong>约3秒钟</strong>，数"1-2-3"以模拟正确的给药时间。</li>
+                  <li>从大腿上移开训练器。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">3</span>重置训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>推回<span class="orange-text">橙色针头保护套</span>。</li>
+                  <li>重新盖上灰色帽子。</li>
+                  <li>将<span class="blue-text">蓝色安全释放装置</span>放回训练器以备下次练习使用。</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="info-box">
+              <p><strong>💡 官方提示：</strong> 泰万（Teva）官方文档强调，在使用真实自动注射器后，应立即寻求紧急医疗帮助。训练器可以穿透衣物使用，但不要注射到身体的其他部位。</p>
+            </div>
+          </section>
+        </div>
+        
+        <div class="tab-content" id="adrenaclick">
+          <h2 class="section-title">Adrenaclick训练器使用说明</h2>
+          
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔍 真实Adrenaclick® vs 训练器对比</h3>
+            <div class="comparison-grid">
+              <div class="device-card">
+                <div class="device-header real">
+                  <h4>💊 真实Adrenaclick® 自动注射器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/eai/EAI photo/Adrenaclick EAI.png" alt="真实Adrenaclick" class="device-image" onclick="openImageModal(this.src, '真实Adrenaclick')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span style="color: #000080; font-weight: bold;">深蓝色</span>外观</li>
+                    <li><span class="yellow-text">黄色保护帽</span></li>
+                    <li><span class="red-text">红色针头端</span></li>
+                    <li><strong>含肾上腺素药物</strong></li>
+                    <li><strong>含真实针头</strong></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="device-card">
+                <div class="device-header trainer">
+                  <h4>🎯 Adrenaclick® 训练器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/trainer/Trainer photo/Adrenaclick trainer.png" alt="Adrenaclick训练器" class="device-image" onclick="openImageModal(this.src, 'Adrenaclick训练器')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span style="color: #d2b48c; font-weight: bold;">米色</span>外观</li>
+                    <li><strong>"TRAINER"</strong> 标识</li>
+                    <li><span class="yellow-text">黄色保护帽</span></li>
+                    <li><strong>无肾上腺素药物</strong></li>
+                    <li><strong>可重复使用</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 视频演示部分 -->
+          <section class="video-section">
+            <h3 class="section-title" style="color: #005baa; margin-top: 0;">📹 视频演示 (1个视频)</h3>
+            <p style="margin-bottom: 20px; color: #333; font-weight: 500;">点击下方链接观看Adrenaclick训练器相关演示：</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 Adrenaclick vs Twinject对比
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">详细对比两种不同品牌训练器的使用方法和特点</p>
+                <a href="video/Adrenaclick Vs Twinject.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Adrenaclick Vs Twinject.mp4', 'Adrenaclick vs Twinject对比'); return false;">
+                  ▶ 播放视频 (9.5MB)
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">2. 操作步骤</h3>
+            <div class="step-container">
+              <div class="step-item">
+                <p><strong><span class="step-number">1</span>移除保护帽：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>拉下两端的<span class="yellow-text">黄色保护帽</span>，露出<span class="red-text">红色尖端</span>。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">2</span>牢固握持并注射：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>用拳头握住设备，<span class="red-text">红色尖端</span>朝下。</li>
+                  <li>将<span class="red-text">红色尖端</span>紧贴大腿外侧中部，与大腿成90°角。</li>
+                  <li>用力按下直到听到"咔嗒"声，保持10秒钟。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">3</span>重置训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>将两端的<span class="yellow-text">黄色保护帽</span>重新装回以备下次训练使用。</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <div class="tab-content" id="anapen">
+          <h2 class="section-title">Anapen训练器使用说明</h2>
+          
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔍 真实Anapen® vs 训练器对比</h3>
+            <div class="comparison-grid">
+              <div class="device-card">
+                <div class="device-header real">
+                  <h4>💊 真实Anapen® 自动注射器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/eai/EAI photo/Anapen EAI.png" alt="真实Anapen" class="device-image" onclick="openImageModal(this.src, '真实Anapen')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span style="color: #ff6600; font-weight: bold;">橙色</span>外观</li>
+                    <li><span class="yellow-text">黄色保护帽</span></li>
+                    <li><span class="red-text">红色针头端</span></li>
+                    <li><strong>含肾上腺素药物</strong></li>
+                    <li><strong>含真实针头</strong></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="device-card">
+                <div class="device-header trainer">
+                  <h4>🎯 Anapen® 训练器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/trainer/Trainer photo/Anapen trainer2.png" alt="Anapen训练器" class="device-image" onclick="openImageModal(this.src, 'Anapen训练器')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span style="color: #ff6600; font-weight: bold;">橙色</span>外观</li>
+                    <li><strong>"TRAINER"</strong> 标识</li>
+                    <li><strong>无肾上腺素药物</strong></li>
+                    <li><strong>可重复使用</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 视频演示部分 -->
+          <section class="video-section">
+            <h3 class="section-title" style="color: #005baa; margin-top: 0;">📹 视频演示 (1个视频)</h3>
+            <p style="margin-bottom: 20px; color: #333; font-weight: 500;">点击下方链接观看Anapen训练器演示：</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 Anapen训练器使用演示
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">展示Anapen训练器的正确使用方法</p>
+                <a href="video/Anapen trainer.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Anapen trainer.mp4', 'Anapen训练器使用演示'); return false;">
+                  ▶ 播放视频 (2.7MB)
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">2. 操作步骤</h3>
+            <div class="step-container">
+              <div class="step-item">
+                <p><strong><span class="step-number">1</span>准备训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>移除<span class="yellow-text">黄色保护帽</span>。</li>
+                  <li>用拳头握住<span style="color: #ff6600; font-weight: bold;">橙色训练器</span>，<span class="red-text">红色端</span>朝下。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">2</span>模拟注射：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>将<span class="red-text">红色端</span>紧贴大腿外侧中部。</li>
+                  <li>用力按下直到听到咔嗒声。</li>
+                  <li>保持在原位10秒钟。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">3</span>重置训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>重新装上<span style="color: #c0c0c0; font-weight: bold;">银色安全帽</span>。</li>
+                  <li>推回<span class="black-text">黑色针头保护套</span>以备下次训练使用。</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔍 训练器设计要求</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #005baa;">
+                <h4 style="color: #005baa; margin-top: 0;">📝 文字要求</h4>
+                <ul class="feature-list">
+                  <li>使用<strong>8级或以下阅读水平</strong></li>
+                  <li>避免医学专业术语</li>
+                  <li>使用主动语态</li>
+                  <li>步骤编号清晰</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;">
+                <h4 style="color: #28a745; margin-top: 0;">🎨 视觉要求</h4>
+                <ul class="feature-list">
+                  <li>高对比度的图片</li>
+                  <li>清晰的设备照片</li>
+                  <li>突出关键部位</li>
+                  <li>逐步操作图解</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #dc3545;">
+                <h4 style="color: #dc3545; margin-top: 0;">⚠️ 安全要求</h4>
+                <ul class="feature-list">
+                  <li>警告信息突出显示</li>
+                  <li>禁忌症明确标注</li>
+                  <li>紧急情况处理</li>
+                  <li>存储条件说明</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          
+        </div>
+        
+        <div class="tab-content" id="emerade">
+          <h2 class="section-title">Emerade训练器使用说明</h2>
+          
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔍 真实Emerade® vs 训练器对比</h3>
+            <div class="comparison-grid">
+              <div class="device-card">
+                <div class="device-header real">
+                  <h4>💊 真实Emerade® 自动注射器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/eai/EAI photo/Emerade EAI.png" alt="真实Emerade" class="device-image" onclick="openImageModal(this.src, '真实Emerade')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色</span>外观</li>
+                    <li><span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色安全帽</span></li>
+                    <li><span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色针头端</span></li>
+                    <li><strong>含肾上腺素药物</strong></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="device-card">
+                <div class="device-header trainer">
+                  <h4>🎯 Emerade® 训练器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/trainer/Trainer photo/Emerade trainer2.jpg" alt="Emerade训练器" class="device-image" onclick="openImageModal(this.src, 'Emerade训练器')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色</span>外观</li>
+                    <li><strong>"TRAINER"</strong> 标识</li>
+                    <li><span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色安全帽</span></li>
+                    <li><span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色针头端</span></li>
+                    <li><strong>无肾上腺素药物</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 视频演示部分 -->
+          <section class="video-section">
+            <h3 class="section-title" style="color: #005baa; margin-top: 0;">📹 视频演示 (1个视频)</h3>
+            <p style="margin-bottom: 20px; color: #333; font-weight: 500;">点击下方链接观看Emerade训练器演示：</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 Emerade训练器使用演示
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">展示Emerade训练器的正确使用方法和重置步骤</p>
+                <a href="video/Emerade trainer.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Emerade trainer.mp4', 'Emerade训练器使用演示'); return false;">
+                  ▶ 播放视频 (4.4MB)
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">2. 操作步骤</h3>
+            <div class="step-container">
+              <div class="step-item">
+                <p><strong><span class="step-number">1</span>准备训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>移除<span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色安全帽</span>。</li>
+                  <li>用拳头握住<span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色训练器</span>，<span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色端</span>朝下。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">2</span>模拟注射：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>将<span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色端</span>紧贴大腿外侧中部。</li>
+                  <li>用力按下直到听到咔嗒声。</li>
+                  <li>保持在原位5秒钟。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">3</span>重置训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>推回<span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色针头保护套</span>。</li>
+                  <li>重新装上<span style="color: #ffffff; background-color: #000; padding: 2px 4px;">白色安全帽</span>以备下次训练使用。</li>
+                  <li>训练器现在可以重复使用。</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <div class="tab-content" id="jext">
+          <h2 class="section-title">Jext训练器使用说明</h2>
+          
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔍 真实Jext® vs 训练器对比</h3>
+            <div class="comparison-grid">
+              <div class="device-card">
+                <div class="device-header real">
+                  <h4>💊 真实Jext® 自动注射器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/eai/EAI photo/Jext EAI.png" alt="真实Jext" class="device-image" onclick="openImageModal(this.src, '真实Jext')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span class="yellow-text">黄色安全帽</span></li>
+                    <li><span class="grey-text">灰色标签笔身</span></li>
+                    <li><span class="black-text">黑色针头端</span></li>
+                    <li><strong>含肾上腺素药物</strong></li>
+                    <li><strong>含真实针头</strong></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="device-card">
+                <div class="device-header trainer">
+                  <h4>🎯 Jext® 训练器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/trainer/Trainer photo/jext trainer.png" alt="Jext训练器" class="device-image" onclick="openImageModal(this.src, 'Jext训练器')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span class="yellow-text">黄色安全帽</span> (相同)</li>
+                    <li><span class="grey-text">灰色标签笔身</span> (相同)</li>
+                    <li><strong>"TRAINER"</strong> 标识</li>
+                    <li><span class="black-text">黑色针头保护套</span></li>
+                    <li><strong>无肾上腺素药物</strong></li>
+                    <li><strong>可重复使用</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 视频演示部分 -->
+          <section class="video-section">
+            <h3 class="section-title" style="color: #005baa; margin-top: 0;">📹 视频演示 (1个视频)</h3>
+            <p style="margin-bottom: 20px; color: #333; font-weight: 500;">点击下方链接观看Jext训练器演示：</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 Jext训练器使用演示
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">展示Jext训练器的正确使用方法和重置步骤</p>
+                <a href="video/Jext trainer.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Jext trainer.mp4', 'Jext训练器使用演示'); return false;">
+                  ▶ 播放视频 (6.7MB)
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">2. 操作步骤</h3>
+            <div class="step-container">
+              <div class="step-item">
+                <p><strong><span class="step-number">1</span>准备训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>移除<span class="yellow-text">黄色安全帽</span>。</li>
+                  <li>用拳头握住灰色标签笔身，黑色端朝下。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">2</span>模拟注射：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>将黑色端紧贴大腿外侧中部。</li>
+                  <li>用力按下直到听到咔嗒声。</li>
+                  <li>保持在原位10秒钟。</li>
+                  <li>从大腿上移开训练器。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">3</span>重置训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>练习后推回<span class="black-text">黑色针头保护套</span>。</li>
+                  <li>重新装上<span class="yellow-text">黄色安全帽</span>。</li>
+                  <li>训练器现在可以重复使用。</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <div class="tab-content" id="auvi-q">
+          <h2 class="section-title">Auvi-Q训练器使用说明</h2>
+          
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔍 真实Auvi-Q® vs 训练器对比</h3>
+            <div class="comparison-grid">
+              <div class="device-card">
+                <div class="device-header real">
+                  <h4>💊 真实Auvi-Q® 自动注射器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/eai/EAI photo/Auvi-Q EAI.png" alt="真实Auvi-Q" class="device-image" onclick="openImageModal(this.src, '真实Auvi-Q')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span style="color: #800080; font-weight: bold;">紫色</span>外观</li>
+                    <li><strong>语音指导功能</strong></li>
+                    <li><span class="red-text">红色针头端</span></li>
+                    <li><strong>含肾上腺素药物</strong></li>
+                    <li><strong>含真实针头</strong></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="device-card">
+                <div class="device-header trainer">
+                  <h4>🎯 Auvi-Q® 训练器</h4>
+                </div>
+                <div class="device-image-container">
+                  <img src="images/trainer/Trainer photo/Auvi-Q trainer.png" alt="Auvi-Q训练器" class="device-image" onclick="openImageModal(this.src, 'Auvi-Q训练器')" />
+                </div>
+                <div class="device-details">
+                  <ul class="feature-list">
+                    <li><span style="color: #800080; font-weight: bold;">紫色</span>外观 (相同)</li>
+                    <li><strong>"TRAINER"</strong> 标识</li>
+                    <li><strong>语音指导功能</strong> (相同)</li>
+                    <li><strong>无肾上腺素药物</strong></li>
+                    <li><strong>可重复使用</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="video-section">
+            <h3 class="section-title" style="color: #005baa; margin-top: 0;">📹 视频演示 (1个视频)</h3>
+            <p style="margin-bottom: 20px; color: #333; font-weight: 500;">点击下方链接观看Auvi-Q训练器演示：</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div class="video-card">
+                <h4 style="color: #005baa; margin-top: 0; border-bottom: 2px solid #005baa; padding-bottom: 10px;">
+                  📹 Auvi-Q训练器使用演示
+                </h4>
+                <p style="font-size: 14px; color: #666; margin: 10px 0;">展示Auvi-Q训练器的语音指导功能和正确使用方法</p>
+                <a href="video/Auvi-Q trainer.mp4" target="_blank" class="video-link" onclick="openVideoModal('video/Auvi-Q trainer.mp4', 'Auvi-Q训练器使用演示'); return false;">
+                  ▶ 播放视频 (5.5MB)
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">2. 操作步骤</h3>
+            <div class="step-container">
+              <div class="step-item">
+                <p><strong><span class="step-number">1</span>准备设备：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>从外包装中取出Auvi-Q训练器。</li>
+                  <li>设备会自动开始语音指导。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">2</span>按照语音指导操作：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>移除<span class="red-text">红色安全护罩</span>。</li>
+                  <li>将<span class="black-text"><strong>黑色端</strong></span>紧贴大腿外侧中部。</li>
+                  <li>用力按下直到听到咔嗒声。</li>
+                  <li>保持在原位，直到语音指导完成。</li>
+                </ul>
+              </div>
+              
+              <div class="step-item">
+                <p><strong><span class="step-number">3</span>重置训练器：</strong></p>
+                <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+                  <li>语音提示完成后重新装上<span class="grey-text">灰色标签帽</span>。</li>
+                  <li>训练器现在可以重复使用。</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="info-box">
+              <p><strong>💡 特色功能：</strong> Auvi-Q训练器具有独特的语音指导功能，会在整个使用过程中提供清晰的步骤指导，帮助用户正确掌握使用方法。</p>
+            </div>
+          </section>
+        </div>
+        
+        <div class="tab-content" id="fda-ifu">
+          <h2 class="section-title">FDA使用说明指南</h2>
+          
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">📋 FDA官方指导原则概述</h3>
+            <p style="margin-bottom: 20px; line-height: 1.6;">美国FDA发布的《使用说明——人用处方药和生物制品患者标签指南》为肾上腺素自动注射器训练器的设计和使用提供了重要指导。</p>
+            
+            <div class="info-box">
+              <h4 style="color: #005baa; margin-top: 0;">🎯 核心要求</h4>
+              <ul style="margin: 10px 0; padding-left: 20px;">
+                <li><strong>清晰的视觉指导</strong> - 使用图片和图表说明每个步骤</li>
+                <li><strong>简化的语言</strong> - 避免医学术语，使用患者易懂的表达</li>
+                <li><strong>逐步说明</strong> - 将复杂操作分解为简单步骤</li>
+                <li><strong>安全警告</strong> - 突出显示重要的安全信息</li>
+              </ul>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">📋 FDA官方文档</h3>
+            <div class="info-box">
+              <h4 style="color: #005baa; margin-top: 0;">📄 PDF文档链接</h4>
+              <ul style="margin: 10px 0; padding-left: 20px;">
+                <li><strong><a href="pdfs/Instructions for Use — Patient Labeling for Human Prescription Drug and Biological Products — Content and Format.pdf" target="_blank" style="color: #005baa; text-decoration: none;">FDA使用说明患者标签指南</a></strong> - 22页 - 详细的患者标签内容和格式要求</li>
+              </ul>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">📋 FDA训练器设计详细要求</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #005baa;">
+                <h4 style="color: #005baa; margin-top: 0;">📝 内容要求</h4>
+                <ul class="feature-list">
+                  <li><strong>阅读水平：</strong>8级或以下</li>
+                  <li><strong>语言风格：</strong>主动语态，简洁明了</li>
+                  <li><strong>术语使用：</strong>避免医学专业术语</li>
+                  <li><strong>结构组织：</strong>逻辑清晰的步骤顺序</li>
+                  <li><strong>一致性：</strong>与FDA批准的处方信息一致</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;">
+                <h4 style="color: #28a745; margin-top: 0;">🎨 视觉设计要求</h4>
+                <ul class="feature-list">
+                  <li><strong>字体：</strong>无衬线字体，最小10点</li>
+                  <li><strong>对比度：</strong>黑色字体，白色背景</li>
+                  <li><strong>图片质量：</strong>高分辨率，清晰可辨</li>
+                  <li><strong>布局：</strong>文本、图片、空白平衡</li>
+                  <li><strong>标题：</strong>标准化标题结构</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #dc3545;">
+                <h4 style="color: #dc3545; margin-top: 0;">⚠️ 安全信息要求</h4>
+                <ul class="feature-list">
+                  <li><strong>警告突出：</strong>重要信息醒目显示</li>
+                  <li><strong>禁忌症：</strong>明确标注使用限制</li>
+                  <li><strong>紧急处理：</strong>详细的应急指导</li>
+                  <li><strong>存储条件：</strong>明确的保存要求</li>
+                  <li><strong>处置指南：</strong>安全的废弃方法</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">📊 FDA批准的训练器品牌</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+              <div style="text-align: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <img src="images/trainer/Trainer photo/Epipen trainer.jpg" alt="EpiPen训练器" style="width: 100%; max-width: 150px; cursor: pointer;" onclick="openImageModal(this.src, 'EpiPen训练器')" />
+                <h4 style="margin: 10px 0 5px 0; color: #005baa;">EpiPen® 训练器</h4>
+                <p style="font-size: 14px; color: #666; margin: 0;">最广泛使用的训练器，橙色外观易识别</p>
+              </div>
+              
+              <div style="text-align: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <img src="images/fda/FDA EMA IFU/teva trainer1.png" alt="Teva训练器" style="width: 100%; max-width: 150px; cursor: pointer;" onclick="openImageModal(this.src, 'Teva训练器')" />
+                <h4 style="margin: 10px 0 5px 0; color: #005baa;">Teva EAI® 训练器</h4>
+                <p style="font-size: 14px; color: #666; margin: 0;">灰色外观，具有明显的"TRAINER"标识</p>
+              </div>
+              
+              <div style="text-align: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <img src="images/trainer/Trainer photo/Auvi-Q trainer.png" alt="Auvi-Q训练器" style="width: 100%; max-width: 150px; cursor: pointer;" onclick="openImageModal(this.src, 'Auvi-Q训练器')" />
+                <h4 style="margin: 10px 0 5px 0; color: #005baa;">Auvi-Q® 训练器</h4>
+                <p style="font-size: 14px; color: #666; margin: 0;">独特的语音指导功能，灰色/白色外壳</p>
+              </div>
+              
+              <div style="text-align: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <img src="images/trainer/Trainer photo/Adrenaclick trainer.png" alt="Adrenaclick训练器" style="width: 100%; max-width: 150px; cursor: pointer;" onclick="openImageModal(this.src, 'Adrenaclick训练器')" />
+                <h4 style="margin: 10px 0 5px 0; color: #005baa;">Adrenaclick® 训练器</h4>
+                <p style="font-size: 14px; color: #666; margin: 0;">米色外观，与真实设备区别明显</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <div class="tab-content" id="fda-hfe">
+          <h2 class="section-title">FDA人因工程指南</h2>
+          
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🧠 人因工程核心概念</h3>
+            <p style="margin-bottom: 20px; line-height: 1.6;">FDA的人因工程指南强调医疗设备设计必须考虑用户的认知能力、身体限制和使用环境，确保在紧急情况下能够安全有效地使用。</p>
+            
+            <div class="info-box">
+              <h4 style="color: #005baa; margin-top: 0;">🎯 关键原则</h4>
+              <ul style="margin: 10px 0; padding-left: 20px;">
+                <li><strong>用户中心设计</strong> - 以实际用户需求为设计核心</li>
+                <li><strong>错误预防</strong> - 通过设计减少使用错误</li>
+                <li><strong>直观操作</strong> - 操作步骤符合用户直觉</li>
+                <li><strong>反馈机制</strong> - 提供清晰的操作反馈</li>
+              </ul>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">📋 FDA人因工程官方文档</h3>
+            <div class="info-box">
+              <h4 style="color: #005baa; margin-top: 0;">📄 PDF文档链接</h4>
+              <ul style="margin: 10px 0; padding-left: 20px;">
+                <li><strong><a href="pdfs/Applying-Human-Factors-and-Usability-Engineering-to-Medical-Devices---Guidance-for-Industry-and-Food-and-Drug-Administration-Staff.pdf" target="_blank" style="color: #005baa; text-decoration: none;">FDA人因工程与可用性工程指南</a></strong> - 49页 - 详细的医疗设备人因工程应用指导原则</li>
+              </ul>
+            </div>
+          </section>
+
+
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🔬 详细的可用性工程流程</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div style="background-color: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #005baa;">
+                <h4 style="color: #005baa; margin-top: 0;">1️⃣ 用户需求分析</h4>
+                <ul class="feature-list">
+                  <li><strong>目标用户识别：</strong>患者、护理者、医护人员</li>
+                  <li><strong>使用环境分析：</strong>家庭、学校、工作场所、紧急情况</li>
+                  <li><strong>用户能力评估：</strong>年龄、身体能力、认知水平</li>
+                  <li><strong>使用频率：</strong>紧急使用vs日常训练</li>
+                  <li><strong>压力因素：</strong>紧急情况下的心理压力</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #f0f8ff; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;">
+                <h4 style="color: #28a745; margin-top: 0;">2️⃣ 设计验证测试</h4>
+                <ul class="feature-list">
+                  <li><strong>任务分析：</strong>分解每个使用步骤</li>
+                  <li><strong>原型测试：</strong>早期设计概念验证</li>
+                  <li><strong>模拟测试：</strong>真实使用场景模拟</li>
+                  <li><strong>错误分析：</strong>识别潜在使用错误</li>
+                  <li><strong>迭代改进：</strong>基于测试结果优化设计</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #fff0f0; padding: 20px; border-radius: 8px; border-left: 4px solid #dc3545;">
+                <h4 style="color: #dc3545; margin-top: 0;">3️⃣ 风险管理</h4>
+                <ul class="feature-list">
+                  <li><strong>使用错误识别：</strong>可能的操作失误</li>
+                  <li><strong>后果评估：</strong>错误使用的严重程度</li>
+                  <li><strong>缓解措施：</strong>设计改进和用户培训</li>
+                  <li><strong>残余风险：</strong>无法完全消除的风险</li>
+                  <li><strong>上市后监测：</strong>持续的安全性监控</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">🔬 训练器可用性测试要求</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+              <div style="background-color: #e8f4fd; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #005baa; margin-top: 0;">👥 用户研究</h4>
+                <ul class="feature-list">
+                  <li>识别目标用户群体</li>
+                  <li>分析使用场景和环境</li>
+                  <li>评估用户能力和限制</li>
+                  <li>收集用户反馈</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #f0f8ff; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #28a745; margin-top: 0;">🧪 可用性测试</h4>
+                <ul class="feature-list">
+                  <li>模拟真实使用环境</li>
+                  <li>测试关键任务完成率</li>
+                  <li>记录使用错误</li>
+                  <li>评估学习曲线</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #fff0f0; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #dc3545; margin-top: 0;">⚠️ 风险评估</h4>
+                <ul class="feature-list">
+                  <li>识别潜在使用错误</li>
+                  <li>评估错误后果严重性</li>
+                  <li>制定风险缓解措施</li>
+                  <li>验证安全性改进</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <div class="tab-content" id="ema-guidance">
+          <h2 class="section-title">EMA训练工具指南</h2>
+          
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🇪🇺 EMA监管框架概述</h3>
+            <p style="margin-bottom: 20px; line-height: 1.6;">欧洲药品管理局(EMA)对肾上腺素自动注射器训练工具的监管要求，强调患者教育和安全使用的重要性。</p>
+            
+            <div class="info-box">
+              <h4 style="color: #005baa; margin-top: 0;">🎯 EMA核心要求</h4>
+              <ul style="margin: 10px 0; padding-left: 20px;">
+                <li><strong>患者教育优先</strong> - 确保患者能够正确使用设备</li>
+                <li><strong>多语言支持</strong> - 适应欧盟多语言环境</li>
+                <li><strong>标准化培训</strong> - 统一的培训标准和材料</li>
+                <li><strong>持续监测</strong> - 上市后安全性监测</li>
+              </ul>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">📋 EMA官方文档</h3>
+            <div class="info-box">
+              <h4 style="color: #005baa; margin-top: 0;">📄 PDF文档链接</h4>
+              <ul style="margin: 10px 0; padding-left: 20px;">
+                <li><strong><a href="pdfs/Better training tools to support patients using adrenaline auto-injectors.pdf" target="_blank" style="color: #005baa; text-decoration: none;">EMA肾上腺素自动注射器训练工具指南</a></strong> - 4页 - 支持患者使用肾上腺素自动注射器的更好训练工具</li>
+              </ul>
+            </div>
+          </section>
+
+
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🇪🇺 EMA详细监管要求</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+              <div style="background-color: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #005baa;">
+                <h4 style="color: #005baa; margin-top: 0;">📚 患者教育重点</h4>
+                <ul class="feature-list">
+                  <li><strong>多语言支持：</strong>适应欧盟27种官方语言</li>
+                  <li><strong>文化适应性：</strong>考虑不同文化背景</li>
+                  <li><strong>教育材料标准化：</strong>统一的培训内容</li>
+                  <li><strong>可及性：</strong>确保所有患者都能获得培训</li>
+                  <li><strong>持续教育：</strong>定期复训和更新</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #f0f8ff; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;">
+                <h4 style="color: #28a745; margin-top: 0;">🔍 质量保证体系</h4>
+                <ul class="feature-list">
+                  <li><strong>制造标准：</strong>符合欧盟医疗器械法规</li>
+                  <li><strong>质量管理：</strong>ISO 13485质量体系</li>
+                  <li><strong>临床评估：</strong>基于临床数据的安全性评估</li>
+                  <li><strong>技术文档：</strong>详细的技术档案要求</li>
+                  <li><strong>符合性声明：</strong>CE标志认证</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #fff0f0; padding: 20px; border-radius: 8px; border-left: 4px solid #dc3545;">
+                <h4 style="color: #dc3545; margin-top: 0;">📊 上市后监测</h4>
+                <ul class="feature-list">
+                  <li><strong>不良事件报告：</strong>EUDAMED数据库</li>
+                  <li><strong>定期安全更新：</strong>PSUR报告</li>
+                  <li><strong>市场监督：</strong>各成员国监管机构协调</li>
+                  <li><strong>召回程序：</strong>统一的产品召回机制</li>
+                  <li><strong>风险沟通：</strong>及时的安全信息传达</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 30px;">
+            <h3 class="section-title">🌍 欧盟批准的训练器品牌</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+              <div style="text-align: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <img src="images/trainer/Trainer photo/Epipen trainer.jpg" alt="EpiPen训练器" style="width: 100%; max-width: 150px; cursor: pointer;" onclick="openImageModal(this.src, 'EpiPen训练器')" />
+                <h4 style="margin: 10px 0 5px 0; color: #005baa;">EpiPen® 训练器</h4>
+                <p style="font-size: 14px; color: #666; margin: 0;">在欧盟广泛使用</p>
+              </div>
+              
+              <div style="text-align: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <img src="images/trainer/Trainer photo/jext trainer.png" alt="Jext训练器" style="width: 100%; max-width: 150px; cursor: pointer;" onclick="openImageModal(this.src, 'Jext训练器')" />
+                <h4 style="margin: 10px 0 5px 0; color: #005baa;">Jext® 训练器</h4>
+                <p style="font-size: 14px; color: #666; margin: 0;">欧洲本土品牌</p>
+              </div>
+              
+              <div style="text-align: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <img src="images/trainer/Trainer photo/Emerade trainer2.jpg" alt="Emerade训练器" style="width: 100%; max-width: 150px; cursor: pointer;" onclick="openImageModal(this.src, 'Emerade训练器')" />
+                <h4 style="margin: 10px 0 5px 0; color: #005baa;">Emerade® 训练器</h4>
+                <p style="font-size: 14px; color: #666; margin: 0;">欧洲专用设备</p>
+              </div>
+            </div>
+          </section>
+
+          <section style="margin-bottom: 20px;">
+            <h3 class="section-title">📋 EMA vs FDA 对比</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div style="background-color: #e8f4fd; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #005baa; margin-top: 0;">🇺🇸 FDA方法</h4>
+                <ul class="feature-list">
+                  <li>强调人因工程</li>
+                  <li>详细的可用性测试</li>
+                  <li>风险管理重点</li>
+                  <li>英语为主</li>
+                </ul>
+              </div>
+              
+              <div style="background-color: #f0f8ff; padding: 20px; border-radius: 8px;">
+                <h4 style="color: #28a745; margin-top: 0;">🇪🇺 EMA方法</h4>
+                <ul class="feature-list">
+                  <li>患者教育优先</li>
+                  <li>多语言要求</li>
+                  <li>标准化培训</li>
+                  <li>持续监测</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <div style="text-align: center; margin-top: 30px; padding: 20px; background-color: #005baa; color: white; border-radius: 8px;">
+        <h3 style="margin-bottom: 15px; color: white;">📝 官方验证状态总结</h3>
+        <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">
+          <strong>Summed Medtech</strong> - 专业医疗器械培训材料 | 最后更新：2024年8月
+        </p>
+      </div>
+    </footer>
+  </div>
+  
+  <!-- 图片模态框 -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+  
+  <!-- JavaScript文件 -->
+  <script src="js/tabs.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
